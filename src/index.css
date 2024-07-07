@@ -1,0 +1,296 @@
+/* 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media (min-width: 768px){
+    body{
+        padding:20px;
+    }
+}
+@media (max-width: 767px){
+    body{
+        padding:10px;
+    }
+}
+
+.main-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container{
+    
+    width: 90vw;
+    height: 95vh;
+    background-color: rgb(179, 179, 195);
+    /* margin: 3% 2vw; */
+    /* display: flex;
+    flex-direction: column;
+justify-content: flex-end;
+}
+.search-box{
+
+}
+.location-size{
+    height: 4vh;
+    margin-right: 5px;
+}
+.search-box input{
+    padding-left: 6px;
+    width: 30vw;
+    height: 4vh;
+    border-radius: 15px;
+}
+.search-btn{
+height: 5vh;
+border: none;
+    width: 3vw;
+}
+
+ */
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body{
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* filter: brightness(80%); */
+    height: 100vh; 
+    overflow: hidden;
+
+ }
+ .error-message{
+    color: red;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .container{
+    width: 65vw;
+    height: 90vh;
+    
+    margin: 30px auto;
+    padding: 15px 15px;
+    /* border-radius: 20px; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+    /* background-color: black; */
+ }
+ 
+ .column1{
+    background-color: rgba(0, 0, 0, 0.5); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    /* border-radius: 12px; */
+ }
+ .column2{
+    padding: 23px 23px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    /* background-color: rgba(186, 184, 184, 0.5);  */
+    background-color: rgba(0, 0, 0, 0.5); 
+    /* border-radius: 12px; */
+ }
+ .dyn-img{
+   margin-left: 100px;
+   margin-bottom: 23px;
+ }
+ 
+ .weather-name{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    color: white;
+ }
+
+ .search-bar {
+   width: 65%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black; /* Underline */
+    max-width: 400px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 4px 0; /* Adjust padding as needed */
+    /* border: 2px solid white; */
+    color: white;
+}
+
+.search-input {
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    flex: 1;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgba(186, 184, 184, -0.5);  ;
+}
+.search-input:focus {
+    outline: none; /* Remove the default focus outline */
+}
+.search-input::placeholder {
+    color: white; /* Ensure the placeholder text is white */
+    font-size: 13px;
+}
+.search-icon {
+    color: white; /* Adjust spacing as needed */
+    cursor: pointer;
+    margin-right: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: grey;
+}
+.location{
+display: flex;
+justify-content: center;
+margin: 23px;
+color: white;
+
+}
+
+.wheather-detail{
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.col-location{
+    display: flex;
+    justify-content: flex-end;
+    padding: 23px;
+    color: white;
+}
+.display{
+    margin-top: 80%;
+    display: flex;
+    padding: 0 20px;
+    color: white;
+}
+.celcius{
+    margin-left: 10%;
+    font-size: 40px;
+    color: white;
+}
+
+.column1 {
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; /* Ensures the text is visible against the background */
+    padding: 20px; /* Adds some padding to the content */
+    height: 87vh; /* Makes the column take full viewport height */
+}
+
+.col-location h2,
+.time-day,
+.celcius {
+    color: inherit; /* Inherits the color from .column1 */
+}
+.col-location{
+    letter-spacing: 2px;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em white,
+    0 0 0.2em white;
+}
+.time{
+letter-spacing: 2px;
+font-weight: bold
+}
+.day{
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.container {
+    transition: background-color 0.3s ease;
+  }
+  
+  .column1, .column2 {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .weather-name, .search-bar, .error-message, .location, .wheather-details {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+
+  @media only screen and (max-width : 802px) {
+    .container{
+        width: 80vw; 
+        height: auto;
+    }
+  }
+
+  @media only screen and (max-width :704px) {
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+  }
+
+  @media only screen and (max-width :688px) {
+    .column1{
+width: 60vw;
+    }
+    .column2{
+width: 40vw;
+    }
+    .search-bar{
+        width: 100%;
+    }
+    search-input {
+        letter-spacing: 0px;
+        border: none;
+        outline: none;
+        flex: 0 0;
+        color: white;
+        padding: 0px;
+        font-size: 10px;
+    
+  }
+
+}
+
+@media only screen and (max-width :630px){
+    .search-icon{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 659px) {
+    .dyn-img {
+      margin-left: 50px; /* Adjust margin as needed */
+      margin-bottom: 10px; /* Adjust margin as needed */
+    }
+    .dyn-img svg {
+      height: 50px !important; /* Adjust the height of the icon */
+    }
+  }
+
+  
+@media only screen and (max-width: 519px) {
+    .dyn-img {
+      margin-left: 30px; /* Adjust margin as needed */
+      margin-bottom: 10px; /* Adjust margin as needed */
+    }
+    .dyn-img svg {
+      height: 50px !important; /* Adjust the height of the icon */
+    }
+  }
