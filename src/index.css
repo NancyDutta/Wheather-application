@@ -85,6 +85,7 @@ border: none;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5px;
+    
     /* background-color: black; */
  }
  
@@ -92,6 +93,7 @@ border: none;
     background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     /* border-radius: 12px; */
+    
  }
  .column2{
     padding: 23px 23px;
@@ -244,6 +246,13 @@ font-weight: bold
         justify-content: center;
     }
   }
+  @media only screen and (max-width :340px) {
+    .display{
+        display: flex;
+        justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 
   @media only screen and (max-width :688px) {
     .column1{
@@ -294,3 +303,26 @@ width: 40vw;
       height: 50px !important; /* Adjust the height of the icon */
     }
   }
+
+  @media (max-width: 452px) {
+    body{
+        overflow: scroll;
+    }
+    .container {
+        display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+
+       /* Switch to a single column layout */
+    }
+    .column1{
+        height: 50%;
+        width: auto;
+    }
+    .column2{
+        height: 50%;
+        width: auto;
+    }
+  }
+
+ 
